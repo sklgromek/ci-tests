@@ -39,6 +39,7 @@ jobs:
             test1
             test4
   build:
+    needs: pre-build
     # The type of runner that the job will run on
     runs-on: windows-2019
 
