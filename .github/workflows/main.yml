@@ -16,6 +16,27 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
+  pre-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List file
+        run: |
+          pwd
+          ls -la
+      
+      - name: Do few things
+        run: |
+          mkdir -p test1/test2/test3
+          mkdir test4
+          echo "should be saved" > test1/test2/test2/somefile
+          echo "that one also" > test4/somefile2
+          
+      - name: Cache packages
+        uses: actions/cache@v2
+        with:
+          path: |
+            test1
+            test4
   build:
     # The type of runner that the job will run on
     runs-on: windows-2019
