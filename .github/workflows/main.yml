@@ -48,10 +48,10 @@ jobs:
       #- uses: actions/checkout@v2
       - uses: actions/download-artifact@v2
         with:
-        name: win-build-artifacts
-        path: |
-          test1
-          test4
+          name: win-build-artifacts
+          path: |
+            test1
+            test4
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
