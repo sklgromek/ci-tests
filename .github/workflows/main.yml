@@ -28,7 +28,7 @@ jobs:
         run: |
           mkdir -p test1/test2/test3
           mkdir test4
-          echo "should be saved" > test1/test2/test2/somefile
+          echo "should be saved" > test1/test2/test3/somefile
           echo "that one also" > test4/somefile2
           
       - name: Cache packages
