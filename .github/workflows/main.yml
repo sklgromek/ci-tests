@@ -39,6 +39,7 @@ jobs:
           - test1
           - test2
     steps:
+      - uses: actions/checkout@v2
       - name: List files in directory
         run: |
           dir ${{ matrix.test_type }}
