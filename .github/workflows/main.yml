@@ -32,7 +32,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     runs-on: ubuntu-latest
-    if: ${{ format('needs.path_filter.outputs.{0}', matrix.test_type) == 'true' }}
+    if: ${{ needs.path_filter.outputs.test1 == 'true' or needs.path_filter.outputs.test2 == 'true' }}
     strategy:
       matrix:
         test_type:
