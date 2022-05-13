@@ -6,11 +6,11 @@ name: CI
 on:
   push:
     branches:
-      - master
+      - main
       - 'v1.*'
   pull_request:
     branches:
-      - master
+      - main
       - 'v1.*'
     types: [opened, reopened, synchronize]
 
@@ -61,6 +61,6 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ matrix.test_type }}-results
+          name: results
           path: |
             unit_test_results.xml
