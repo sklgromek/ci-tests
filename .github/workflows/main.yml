@@ -54,7 +54,7 @@ jobs:
         if: always()
         run: |
           mkdir -p ./pr
-          echo -n ${{ steps.filter.outputs.integration_tests  == 'false' }} > ./pr/skipped
+          echo -n xs > ./pr/skipped
       - uses: actions/upload-artifact@v3
         if: always()
         with:
