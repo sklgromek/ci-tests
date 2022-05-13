@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Debug
         run: |
-          Showing after merge
+          echo "showing after merge"
       - name: 'Download artifact'
         uses: actions/github-script@v3.1.0
         with:
