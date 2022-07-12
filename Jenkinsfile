@@ -1,6 +1,5 @@
 pipeline {
   agent {
-    label 'XD'
   }
   environment {
     TESTVAR = 'Test'
