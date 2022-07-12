@@ -19,6 +19,7 @@ pipeline {
         sh 'cat testfile'
         sh 'env'
       }
+  }
   post {
     always {
       cleanWs()
