@@ -1,4 +1,7 @@
 pipeline {
+  agent {
+    label 'XD'
+  }
   environment {
     TESTVAR = 'Test'
   }
@@ -14,11 +17,12 @@ pipeline {
         sh "export DUPA=1"
       }
     }
-    stage('stage2')
+    stage('stage2') {
       steps {
         sh 'cat testfile'
         sh 'env'
       }
+    }
   }
   post {
     always {
